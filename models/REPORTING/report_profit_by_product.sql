@@ -1,0 +1,13 @@
+SELECT
+    PRODUCTID
+    , PRODUCTNAME
+    , CATEGORY
+    , SUCATEGORY
+    , SUM(ORDER_PROFIT) AS PROFIT
+FROM 
+    {{ ref('stg_orders') }}
+GROUP BY
+    PRODUCTID
+    , PRODUCTNAME
+    , CATEGORY
+    , SUCATEGORY
