@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: RAW_CUSTOMER
+    columns:
+      - name: CUSTOMERID
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMERNAME
+        tests:
+          - not_null
+      - name: SEGMENT
+        tests:
+          - accepted_values:
+              values:
+                - 'consumer'
+                - 'Home Office'
+                - 'corporate'
