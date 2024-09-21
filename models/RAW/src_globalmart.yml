@@ -3,11 +3,13 @@ version: 2
 sources:
   - name: globalmart
     database: raw
+    description: It is  database
     schema: globalmart
     tables:
       - name: customer
         columns:
           - name: customerid
+            description: It is primary key
             tests:
               - unique
       - name: orders
